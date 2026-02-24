@@ -9,7 +9,7 @@ npm install @hynek/poi-sdk-js
 ## Usage
 
 ```ts
-import { HynekPOIClient } from "@hynek/poi-sdk-js";
+import { HynekPOIClient } from "@hyneksystems/poi-sdk-js";
 
 const client = new HynekPOIClient();
 
