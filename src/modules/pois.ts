@@ -5,11 +5,11 @@ export class POIModule {
   constructor(private http: HttpClient) {}
 
   async nearby(params: {
-    latitude: number;
-    longitude: number;
+    lat: number;
+    lng: number;
     radius?: number;
   }): Promise<POI[]> {
-    return this.http.get("/pois/nearby", params);
+    return this.http.get("/v1/search", params);
   }
 
   async get(id: string): Promise<POI> {
