@@ -1,5 +1,5 @@
 import { HttpClient } from "../http";
-import { POI } from "../types";
+import { PaginatedPois, POI } from "../types";
 
 export class POIModule {
   constructor(private http: HttpClient) {}
@@ -8,11 +8,11 @@ export class POIModule {
     lat: number;
     lng: number;
     radius?: number;
-  }): Promise<POI[]> {
+  }): Promise<PaginatedPois> {
     return this.http.get("/v1/search", params);
   }
 
   async get(id: string): Promise<POI> {
-    return this.http.get(`/pois/${id}`);
+    return this.http.get(`/v1/poi/${id}`);
   }
 }
