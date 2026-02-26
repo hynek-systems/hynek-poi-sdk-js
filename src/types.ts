@@ -10,7 +10,7 @@ export interface POI {
   rating_count?: number;
   website?: string;
   phone?: string;
-  opening_hours?: string;
+  opening_hours?: string[];
   cuisine?: string;
   price_level?: number;
   menu_url?: string;
